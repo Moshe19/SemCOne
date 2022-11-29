@@ -1,19 +1,17 @@
-﻿using System;
+﻿
+// Написать программу, которая из имеющегося массива строк формирует массив из строк, 
+// длина которых либо меньше либо равна 3 символа. Первоначальный массив можно ввести с клавиатуры, 
+// либо задать на старте выполнения алгоритма.
+// При решение не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
-namespace Work
+
+Console.Write("Сколько элементов Вы хотите ввести? ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+string[] arrayStrings = new string[size];
+for (int i = 0; i < size; i++)
 {
-    class Program
-    {
-        static void Main(string[] array)
-        {
-            string[] arr;
-            int count;
-            string n;
-            string[] result;
-
-            Console.WriteLine("Введите данные через пробел: ");
-            count = 0;
-            arr = new string[count]; 
-        }
-    }
+    Console.WriteLine($"Введите {i+1}-й элемент: ");
+    string element = Convert.ToString(Console.ReadLine());
+    arrayStrings[i] = element;
 }
