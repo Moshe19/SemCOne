@@ -5,34 +5,35 @@
 // При решение не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
 
-Console.Write("Сколько элементов Вы хотите ввести? ");
+Console.Write("Введите желаемое колличество элеменов в массив: ");
 int size = Convert.ToInt32(Console.ReadLine());
 
-string[] arrayStrings = new string[size];
+string[] arreyStrings = new string[size];
 for (int i = 0; i < size; i++)
 {
-    Console.WriteLine($"Введите {i+1}-й элемент: ");
-    string element = Convert.ToString(Console.ReadLine());
-    arrayStrings[i] = element;
+    Console.WriteLine("Можете начинать.");
+    Console.WriteLine($"Введите {i+1}-й элемент и нажмите entr: ");
+    string arrey = Convert.ToString(Console.ReadLine());
+    arreyStrings[i] = arrey;
 }
-string[] arrayFinal = new string[size];
+string[] arreyFinal = new string[size];
 int len = 3;
-int pos = 0;
+int count = 0;
 for (int j = 0; j < size; j++)
 {
-    if (arrayStrings[j].Length <= len)
+    if (arreyStrings[j].Length <= len)
     {
-        arrayFinal[pos] = arrayStrings[j];
-        pos++;
+        arreyFinal[count] = arreyStrings[j];
+        count++;
     }
 }
 Console.WriteLine();
-PrintArray(arrayFinal);
-void PrintArray(string[] array)
+PrintArray(arreyFinal);
+void PrintArray(string[] arrey)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arrey.Length; i++)
     {
-        Console.Write(array[i] + " ");
+        Console.Write(arrey[i] + " ");
     }
     Console.WriteLine();
 }
